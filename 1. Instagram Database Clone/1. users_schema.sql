@@ -1,0 +1,12 @@
+CREATE DATABASE instagram_db;
+
+GO
+
+USE instagram_db;
+
+CREATE TABLE users(
+	id INT IDENTITY(1,1),
+	username NVARCHAR(255) UNIQUE NOT NULL,
+	created_at DATETIME DEFAULT GETDATE(),
+	CONSTRAINT PK_Users_Id PRIMARY KEY (id)
+);
